@@ -8,5 +8,6 @@ def normal_dist(x,prom,sigma):
 def get_fit(filename):
   datos=np.loadtxt(filename)
   plt.hist(datos)
-  
-  print normal_dist()
+  mean=np.mean(datos)
+  desv=np.std(datos)
+  print normal_dist(datos,mean,desv)
